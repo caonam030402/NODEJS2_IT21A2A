@@ -1,0 +1,15 @@
+<h1>Sửa lớp</h1>
+
+<form action="/update" method="POST">
+  ID: <input name="_id" type="text" value="<%= lop.id %>" />
+  <br />
+  NAME: <input name="tenLop" type="text" value="<%= lop.tenLop%>" />
+  <br />
+  NUMBER STUDENT: <input name="soLuong" type="text" value="<%= lop.soLuong%>" />
+  <br />
+  CLASSCODE: <input name="maLopHoc" type="text" value="<%= lop.maLopHoc%>" />
+  <br />
+  INSTRUCTOR CODE:
+  <input name="maGiangVien" type="text" value="<%= lop.maGiangVien%>" />
+  <button type="submit">Sửa lớp</button>
+</form>

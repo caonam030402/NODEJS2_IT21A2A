@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Caonam</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Danh sách lớp</h1>
+    <a href="form-add">
+      <button>Thêm lớp</button>
+    </a>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>NUMBER STUDENT</th>
+        <th>CLASSCODE</th>
+        <th>INSTRUCTOR CODE</th>
+        <th>ACTION</th>
+      </tr>
+      <% lops.forEach(item => { %>
+      <tr>
+        <td><%= item._id %></td>
+        <td><%= item.tenLop %></td>
+        <td><%= item.soLuong %></td>
+        <td><%= item.maLopHoc %></td>
+        <td><%= item.maGiangVien %></td>
+        <td>
+          <a href="/form-update/<%= item._id %>"> Update</a> ||
+          <a href="/form-delete/<%= item._id %>"> Delete</a>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
